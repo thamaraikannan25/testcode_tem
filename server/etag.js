@@ -20,7 +20,6 @@ const hash = (payload) => '"' +
     .digest().toString('hex').substring(0, 8) +
   '"'
 
-// basic rudimentary incomplete cache control hook
 function etagPreHook (req, reply, done) {
   let newPayload
 
