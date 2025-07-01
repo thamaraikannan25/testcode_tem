@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "author": "",
   "license": "ISC",
@@ -13,6 +16,9 @@
     "fastify": "^4.2.0"
   },
   "devDependencies": {
-    "standard": "^17.0.0"
+    "standard": "^17.0.0",
+    "vitest": "^1.1.0",
+    "@vitest/ui": "^1.1.0",
+    "supertest": "^6.3.3"
   }
 }

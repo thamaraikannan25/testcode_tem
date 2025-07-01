@@ -1,4 +1,4 @@
-const crypto = require("crypto");
+import crypto from "crypto";
 
 const REFRESH_SECONDS = 120
 
@@ -78,7 +78,7 @@ function etagOnSendHook (req, reply, payload, done) {
   done(null, newPayload)
 }
 
-module.exports = function (app, opts, done) {
+export default function (app, opts, done) {
 
   app.addHook('preHandler', etagPreHook)
 
