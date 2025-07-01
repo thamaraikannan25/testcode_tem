@@ -29,8 +29,8 @@ app.route({
     }
   },
   handler: function (request, reply) {
-    const greeting = request.query.greeting ? request.query.greeting : 'Hello'
-    const name = request.query.name
+    const greeting = (request.query.greeting || 'Hello').replace(/[<>]/g, '')
+    const name = request.query.name.replace(/[<>]/g, '')
     let message = greeting + ' ' + name + '!'
     if (request.query.excited) {
       message = message.toUpperCase() + '!!'
