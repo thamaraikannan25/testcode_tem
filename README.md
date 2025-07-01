@@ -4,13 +4,14 @@ Sample app using [React](https://reactjs.org/) for frontend and [Fastify](https:
 
 ## Development
 
-### Frontent
+### Frontend
 
 `ui` directory contains the frontend code created using [Create React App](https://create-react-app.dev).
 
-Start development:
+Install dependencies and start development:
 
 ```sh
+$ npm install
 $ npm start
 ```
 
@@ -18,9 +19,10 @@ $ npm start
 
 `server` directory contains the API server code using [Fastify](https://fastify.io/) framework. 
 
-Start the server:
+Install dependencies and start the server:
 
 ```sh
+$ npm install
 $ npm start
 ```
 
