@@ -1,10 +1,11 @@
-const fastify = require('fastify')
+import fastify from 'fastify'
+import etagPlugin from './etag.js'
 
 const port = process.env.PORT || 4000
 
 const app = fastify({ logger: true })
 
-app.register(require('./etag'), { prefix: '/etag' })
+app.register(etagPlugin, { prefix: '/etag' })
 
 app.route({
   method: 'GET',
